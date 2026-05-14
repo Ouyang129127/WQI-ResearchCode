@@ -227,6 +227,8 @@ for k in [best_k_sil, best_k_ch, best_k_elbow]:
     k_candidates[k] = k_candidates.get(k, 0) + 1
 optimal_k = max(k_candidates, key=lambda x: (k_candidates[x], -x))
 
+
+
 print(f"  轮廓系数最佳 k = {best_k_sil}  (silhouette = {silhouette_scores[k_range.index(best_k_sil)]:.4f})")
 print(f"  CH 指数最佳 k   = {best_k_ch}  (CH = {ch_scores[k_range.index(best_k_ch)]:.2f})")
 print(f"  肘部法则最佳 k   = {best_k_elbow}")
